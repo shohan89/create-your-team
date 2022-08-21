@@ -38,9 +38,9 @@
                   <div class="card bg-dark">
                     <img src="images/player-1.png" class="card-img-top" alt="...">
                     <div class="card-body text-center">
-                      <h5 class="card-title">Lionel Messi</h5>
+                      <h5 id="player-1-name" class="card-title player-names">Lionel Messi</h5>
                       <p class="card-text">36 Goals . 122 Assist</p>
-                      <a href="#" class="btn btn-primary">SELECT</a>
+                      <a id="player-1" onclick="addLi(this)" class="btn btn-primary">SELECT</a>
                     </div>
                   </div>
                 </div>
@@ -48,9 +48,9 @@
                   <div class="card bg-dark">
                     <img src="images/player-2.png" class="card-img-top" alt="...">
                     <div class="card-body text-center">
-                      <h5 class="card-title">Neymar Jr</h5>
+                      <h5 id="player-2-name" class="card-title player-names">Neymar Jr</h5>
                       <p class="card-text">56 Goals . 162 Assist</p>
-                      <a href="#" class="btn btn-primary">SELECT</a>
+                      <a id="player-2" onclick="addLi(this)" class="btn btn-primary">SELECT</a>
                     </div>
                   </div>
                 </div>
@@ -58,9 +58,9 @@
                   <div class="card bg-dark">
                     <img src="images/player-3.png" class="card-img-top" alt="...">
                     <div class="card-body text-center">
-                      <h5 class="card-title">Kylian Mbappé</h5>
+                      <h5 id="player-3-name" class="card-title player-names">Kylian Mbappé</h5>
                       <p class="card-text">46 Goals . 112 Assist</p>
-                      <a href="#" class="btn btn-primary">SELECT</a>
+                      <a id="player-3" onclick="addLi(this)" class="btn btn-primary">SELECT</a>
                     </div>
                   </div>
                 </div>
@@ -68,9 +68,9 @@
                   <div class="card bg-dark">
                     <img src="images/player-4.png" class="card-img-top" alt="...">
                     <div class="card-body text-center">
-                      <h5 class="card-title">Vítor Machado</h5>
+                      <h5 id="player-4-name" class="card-title player-names">Vítor Machado</h5>
                       <p class="card-text">22 Goals . 89 Assist</p>
-                      <a href="#" class="btn btn-primary">SELECT</a>
+                      <a id="player-4" onclick="addLi(this)" class="btn btn-primary">SELECT</a>
                     </div>
                   </div>
                 </div>
@@ -78,9 +78,9 @@
                   <div class="card bg-dark">
                     <img src="images/player-5.png" class="card-img-top" alt="...">
                     <div class="card-body text-center">
-                      <h5 class="card-title">Sergio Ramos</h5>
+                      <h5 id="player-5-name" class="card-title player-names">Sergio Ramos</h5>
                       <p class="card-text">42 Goals . 98 Assist</p>
-                      <a href="#" class="btn btn-primary">SELECT</a>
+                      <a id="player-5" onclick="addLi(this)" class="btn btn-primary">SELECT</a>
                     </div>
                   </div>
                 </div>
@@ -88,9 +88,9 @@
                   <div class="card bg-dark">
                     <img src="images/player-6.png" class="card-img-top" alt="...">
                     <div class="card-body text-center">
-                      <h5 class="card-title">Renato Sanches</h5>
+                      <h5 id="player-6-name" class="card-title player-names">Renato Sanches</h5>
                       <p class="card-text">47 Goals . 109 Assist</p>
-                      <a href="#" class="btn btn-primary">SELECT</a>
+                      <a id="player-6" onclick="addLi(this)" class="btn btn-primary">SELECT</a>
                     </div>
                   </div>
                 </div>
@@ -107,12 +107,12 @@
                   <h3>Selected - V</h3>
                   <img class="mb-3" src="images/Ureg-Ureg Marker.png" alt="">
                 </div>
-                <ol class="list-group list-group-numbered">
-                  <li class="list-group-item bg-dark text-light">Player - 1</li>
+                <ol id="player-list" class="list-group list-group-numbered">
+                  <!-- <li class="list-group-item bg-dark text-light">Player - 1</li>
                   <li class="list-group-item bg-dark text-light">Player - 2</li>
                   <li class="list-group-item bg-dark text-light">Player - 3</li>
                   <li class="list-group-item bg-dark text-light">Player - 4</li>
-                  <li class="list-group-item bg-dark text-light">Player - 5</li>
+                  <li class="list-group-item bg-dark text-light">Player - 5</li> -->
                 </ol>
               </div>
               <!-- Seclected Players end  -->
@@ -126,13 +126,13 @@
                 <div class="perPlayerCalculateField text-center">
                   <div class="row">
                     <div class="col-md-6">
-                      <label for="inputPassword" class="col-form-label">Per Player</label>
+                      <label for="perPlayerCost" class="col-form-label">Per Player</label>
                     </div>
                     <div class="col-md-6">
-                      <input type="text" class="form-control" id="inputPassword" placeholder="EX: $1000">
+                      <input type="text" class="form-control" id="perPlayerCost" placeholder="EX: $1000">
                     </div>
                   </div>
-                  <button class="btn btn-primary mt-3 col-lg-12">Calculate</button>
+                  <button id="calculateBtn" class="btn btn-primary mt-3 col-lg-12">Calculate</button>
                   <h5 class="mt-3">Player Expenses: <span>$5000</span></h5>
                 </div>
                 <!-- Per Player calculate field  -->
@@ -140,21 +140,21 @@
                 <div class="totalCalculationField text-center mt-3">
                   <div class="row">
                     <div class="col-md-6">
-                      <label for="inputPassword" class="col-form-label">Manager</label>
+                      <label for="managerCost" class="col-form-label">Manager</label>
                     </div>
                     <div class="col-md-6">
-                      <input type="text" class="form-control" id="inputPassword" placeholder="EX: $1000">
+                      <input type="text" class="form-control" id="managerCost" placeholder="EX: $1000">
                     </div>
                   </div>
                   <div class="row mt-3">
                     <div class="col-md-6">
-                      <label for="inputPassword" class="col-form-label">Coach</label>
+                      <label for="coachCost" class="col-form-label">Coach</label>
                     </div>
                     <div class="col-md-6">
-                      <input type="text" class="form-control" id="inputPassword" placeholder="EX: $1000">
+                      <input type="text" class="form-control" id="coachCost" placeholder="EX: $1000">
                     </div>
                   </div>
-                  <button class="btn btn-primary mt-3 col-lg-12">Calculate Total</button>
+                  <button id="calculateTotalBtn" class="btn btn-primary mt-3 col-lg-12">Calculate Total</button>
                   <h5 class="mt-3">Total: <span>$5000</span></h5>
                 </div>
                 <!-- Total calculation field -->
@@ -186,6 +186,7 @@
 <!-- Boostrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 <!-- Custom JS -->
+<script src="scripts/utilities.js"></script>
 <script src="scripts/index.js"></script>
 </body>
 </html>
