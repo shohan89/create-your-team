@@ -25,8 +25,8 @@
     </section>
   </header>
   <!-- Header End -->
-  <!-- Main Section Start -->
-  <main class="mt-5 mb-5">
+   <!-- Main Section Start -->
+   <main class="mt-5 mb-5">
     <section>
       <div class="container">
         <div class="row">
@@ -102,27 +102,62 @@
           <div class="col-lg-3">
             <div class="sideBarWraper">
               <!-- Seclected Players start  -->
-              <div>
-                <h3>Selected - V</h3>
-                <ul>
-                  <li>1. Player - 1</li>
-                  <li>2. Player - 2</li>
-                  <li>3. Player - 3</li>
-                  <li>4. Player - 4</li>
-                  <li>5. Player - 5</li>
-                </ul>
+              <div class="p-3 rounded mb-5 bg-dark">
+                <div class="text-center">
+                  <h3>Selected - V</h3>
+                  <img class="mb-3" src="images/Ureg-Ureg Marker.png" alt="">
+                </div>
+                <ol class="list-group list-group-numbered">
+                  <li class="list-group-item bg-dark text-light">Player - 1</li>
+                  <li class="list-group-item bg-dark text-light">Player - 2</li>
+                  <li class="list-group-item bg-dark text-light">Player - 3</li>
+                  <li class="list-group-item bg-dark text-light">Player - 4</li>
+                  <li class="list-group-item bg-dark text-light">Player - 5</li>
+                </ol>
               </div>
               <!-- Seclected Players end  -->
               <!-- Budget start -->
-              <div>
-                <h3>Budget</h3>
-                <ul>
-                  <li>1. Player - 1</li>
-                  <li>2. Player - 2</li>
-                  <li>3. Player - 3</li>
-                  <li>4. Player - 4</li>
-                  <li>5. Player - 5</li>
-                </ul>
+              <div class="p-3 rounded mb-5 bg-dark">
+                <div class="text-center">
+                  <h3>Budget</h3>
+                  <img class="mb-3" src="images/Ureg-Ureg Marker.png" alt="">
+                </div>
+                <!-- Per Player calculate field  -->
+                <div class="perPlayerCalculateField text-center">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label for="inputPassword" class="col-form-label">Per Player</label>
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" class="form-control" id="inputPassword" placeholder="EX: $1000">
+                    </div>
+                  </div>
+                  <button class="btn btn-primary mt-3 col-lg-12">Calculate</button>
+                  <h5 class="mt-3">Player Expenses: <span>$5000</span></h5>
+                </div>
+                <!-- Per Player calculate field  -->
+                <!-- Total calculation field -->
+                <div class="totalCalculationField text-center mt-3">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label for="inputPassword" class="col-form-label">Manager</label>
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" class="form-control" id="inputPassword" placeholder="EX: $1000">
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-md-6">
+                      <label for="inputPassword" class="col-form-label">Coach</label>
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" class="form-control" id="inputPassword" placeholder="EX: $1000">
+                    </div>
+                  </div>
+                  <button class="btn btn-primary mt-3 col-lg-12">Calculate Total</button>
+                  <h5 class="mt-3">Total: <span>$5000</span></h5>
+                </div>
+                <!-- Total calculation field -->
               </div>
               <!-- Budget end -->
             </div>
@@ -130,8 +165,6 @@
           <!-- Side bar end  -->
         </div>
       </div>
-      
-      
     </section>
   </main>
   <!-- Main Section End -->
