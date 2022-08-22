@@ -1,30 +1,36 @@
 const playerNames = [];
+// console.log(playerNames);
 
+
+// add event listener to the button and create li element 
 function addLi(element) {
     
   const playerName = element.parentNode.children[0].innerText;
-  
-  playerNames.push(playerName);
+  playerNames.push(playerName)
+  // console.log(playerName);
   
   for (let i = 0; i < playerNames.length; i++) {
     if (playerNames[i] === playerName) {
-      if ( i >= 5 ){
-        return alert("You can only add 5 players");
-      }
-      else {
-
+      if ( i <= 4 ){
         const ol = document.getElementById('player-list');
         const li = document.createElement('li');
         li.innerHTML = `<li class="list-group-item bg-dark text-light">${i + 1}. ${playerName}</li>`;
         ol.appendChild(li);
+        // console.log(playerNames);
+      }
+      else {
+        
+        alert("You can only add 5 players");
+        return;
         
       }
     }
   }
   disableButton(element.id);
+  
 }
 
-// Calculate button calculation
+// Calculate per player expenses
 function calculatePlayerExpenses(element) {
 
   const perPlayerCost = getInputValue('perPlayerCost');
@@ -37,7 +43,8 @@ function calculatePlayerExpenses(element) {
       if (playerNames[i] === playerName) {
 
         if (isNaN(perPlayerCost)) {
-          return alert("Please enter your amount!");
+          alert("Please enter your amount!");
+          return;
         }
         else {
 
@@ -49,7 +56,7 @@ function calculatePlayerExpenses(element) {
     }
 }
 
-// Calculate Total button calculation
+// Calculate Total Expenses
 function calculateTotalExpenses(element) {
 
   const managerCost = getInputValue('managerCost');
@@ -57,7 +64,7 @@ function calculateTotalExpenses(element) {
   if (isNaN(managerCost) || isNaN(coachCost)) {
 
     return alert("Please enter your amount!");
-    
+
   }
   else {
 
@@ -66,6 +73,4 @@ function calculateTotalExpenses(element) {
     setTextValue('totalExpense', totalExpense);
 
   }
-  
-
 }
