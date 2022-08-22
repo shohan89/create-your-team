@@ -21,3 +21,11 @@ function getInputValue (id) {
   inputField.value = "";
   return inputFieldValue;
 }
+
+// this function refers to set the result to the target element
+function setTextValue (id, result) {
+  
+  const playerExpensesElement = document.getElementById(id);
+  playerExpensesElement.innerText = result;
+  
+}

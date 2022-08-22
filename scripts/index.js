@@ -22,7 +22,6 @@ function addLi(element) {
     }
   }
   disableButton(element.id);
-
 }
 
 // Calculate button calculation
@@ -43,10 +42,30 @@ function calculatePlayerExpenses(element) {
         else {
 
           const playerExpenses = perPlayerCost * (i);
-          const playerExpensesElement = document.getElementById('playerExpenses');
-          playerExpensesElement.innerText = playerExpenses;
+          setTextValue('playerExpenses', playerExpenses);
 
         }
       }
     }
+}
+
+// Calculate Total button calculation
+function calculateTotalExpenses(element) {
+
+  const managerCost = getInputValue('managerCost');
+  const coachCost = getInputValue('coachCost');
+  if (isNaN(managerCost) || isNaN(coachCost)) {
+
+    return alert("Please enter your amount!");
+    
+  }
+  else {
+
+    const totalPlayerExpense = parseInt(document.getElementById('playerExpenses').innerText);
+    const totalExpense = managerCost + coachCost + totalPlayerExpense;
+    setTextValue('totalExpense', totalExpense);
+
+  }
+  
+
 }
